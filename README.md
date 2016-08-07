@@ -44,7 +44,7 @@ Another way to test this route is to run `curl localhost:3000` in your terminal.
 
 Try running `curl localhost:3000/hello`. You should see `Cannot GET /hello`. Why? Because our app doesn't know to handle the `/hello` path. Each time a request to our app is made, the Express app checks routes that have been registered.
 
-A route is a path and a callback function. We used `app.get` above to register a route. When a request is made for that path, the callback function that was the second argument to `app.get` gets called. That function is given a request and a response. In our callback function, we've called these arguments `req` (for request) and `res` (for response). Check out the docs to learn more about Express [requests](https://expressjs.com/en/4x/api.html#req) and [responses](https://expressjs.com/en/4x/api.html#res). We use the response argument's `send` method to send data back to the requester.
+In Express, a route is a path and a callback function. We used `app.get` above to register a route. When a request is made for that path, the callback function that was the second argument to `app.get` gets called. That function is given a request and a response. In our callback function, we've called these arguments `req` (for request) and `res` (for response). Check out the docs to learn more about Express [requests](https://expressjs.com/en/4x/api.html#req) and [responses](https://expressjs.com/en/4x/api.html#res). We use the response argument's `send` method to send data back to the requester.
 
 Let's add a route for `/hello` and try that curl command again. Our code show now look something like this:
 
@@ -189,8 +189,7 @@ If we structure our routes with routers, it will be very easy for us change what
 
 In this lesson we learned how to start building an application with many routes. We say how we can capture parts of the path; the same technique that Facebook uses to create a separate url for each of their users. We also saw that we can create a separate router using `express.Router` which we can then mount in into our Express app.
 
-With this foundation we are now ready to start manipulating data in the [next lesson]( https://github.com/learn-co-curriculum/express-routing-crud
-).
+With this routing foundation we can now build lots of useful Express apps!
 
 ## Resources
 
